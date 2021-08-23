@@ -1,14 +1,22 @@
-import React, { Component } from "react"
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/button-has-type */
+/* eslint-disable react/state-in-constructor */
+import React, { Component } from 'react';
 
 class InputTodo extends Component {
-  state = {
-    title: "",
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: '',
+    };
   }
-  onChange = e => {
+
+  onChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
-    })
+    });
   }
+
   render() {
     return (
       <form>
@@ -21,7 +29,7 @@ class InputTodo extends Component {
         />
         <button>Submit</button>
       </form>
-    )
+    );
   }
 }
-export default InputTodo
+export default InputTodo;
